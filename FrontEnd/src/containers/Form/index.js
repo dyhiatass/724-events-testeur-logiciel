@@ -42,22 +42,24 @@ const Form = ({ onSuccess, onError }) => {
     <form onSubmit={sendContact}>
       <div className="row">
         <div className="col">
-          <Field placeholder="" label="Nom" />
-          <Field placeholder="" label="Prénom" />
+          <Field placeholder="" label="Nom" data-cy='input-nom' />
+          <Field placeholder="" label="Prénom" data-cy="input-prenom" />
           <Select
+            data-cy="select-contactType"
             selection={["Personnel", "Entreprise"]}
             onChange={() => null}
             label="Personnel / Entreprise"
             type="large"
             titleEmpty
           />
-          <Field placeholder="" label="Email" />
+          <Field data-cy="input-email" placeholder="" label="Email" />
           <Button type={BUTTON_TYPES.SUBMIT} disabled={sending}>
             {sending ? "En cours" : "Envoyer"}
           </Button>
         </div>
         <div className="col">
           <Field
+          data-cy="textarea-message"
             placeholder="message"
             label="Message"
             type={FIELD_TYPES.TEXTAREA}

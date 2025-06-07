@@ -52,13 +52,13 @@ const Form = ({ onSuccess, onError, date, id }) => {
     <form onSubmit={sendContact}>
       <div className="row">
         <div className="col">
-          <Field placeholder="" label="Nom" />
-          <Field placeholder="" label="Prénom" />
+          <Field placeholder="" label="Nom"/>
+          <Field placeholder="" label="Prénom"/>
           <label htmlFor="date">Date
-          <input type="date" id="date" value={inscriptionDate} name="date" onChange={changeDate} />
+          <input type="date" id="date" value={inscriptionDate} name="date" onChange={changeDate}/>
           </label>
-          <Field  label="Email" />
-          <Button type={BUTTON_TYPES.SUBMIT} disabled={sending}>
+          <Field  label="Email"/>
+          <Button type={BUTTON_TYPES.SUBMIT} disabled={sending} data-testid="inscription-submit">
             {sending ? "En cours" : "Envoyer"}
           </Button>
         </div>
