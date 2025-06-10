@@ -4,7 +4,7 @@ describe('Test d\'inscription via slider', () => {
     cy.visit('http://localhost:3000/');
   });
 
-  it('doit permettre de cliquer sur la slide affichée et soumettre le formulaire', () => {
+  it('Permet de cliquer sur la slide affichée, de soumettre le formulaire et d’afficher le message de succès', () => {
     // On intercepte la requête qui charge les détails de l’événement
     cy.intercept('GET', '/api/events/*').as('getEventDetails');
 

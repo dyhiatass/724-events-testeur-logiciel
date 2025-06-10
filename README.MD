@@ -60,8 +60,8 @@ Ligne de commande
 ### Frontend – Exemples de fichiers :
 Exemples de fichiers de tests :
 - eventListFilter.cy.js
-- form-inscription-submit.cy.js
-- form-contact-submit.cy.js
+- inscription-submit-success.cy.js
+- contact-submit-success.cy.js
 - menuNavigation.cy.js
 - homepage.cy.js
 ### Backend (API) – Exemples de fichiers :
@@ -73,8 +73,8 @@ Exemples de fichiers de tests :
 | Fichier de test                 | Statut     |
 | ------------------------------- | ---------- |
 | `eventListFilter.cy.js`         | ❌ Échec    |
-| `form-inscription-submit.cy.js` | ❌ Échec    |
-| `form-contact-submit.cy.js`     | ❌ Échec    |
+| `inscription-submit-success.cy.js` | ❌ Échec    |
+| `contact-submit-success.cy.js`     | ❌ Échec    |
 | `menuNavigation.cy.js`          | ⚠️ Partiel |
 | `homepage.cy.js`                | ✅ Réussi   |
 

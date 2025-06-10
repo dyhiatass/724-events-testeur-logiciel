@@ -1,11 +1,11 @@
-describe('Formulaire de contact', () => {
+describe('Test de la soumission du formulaire de contact et validation du message de succès', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/#contact');
     cy.get('#contact').scrollIntoView();
     cy.wait(1000);
   });
 
-  it('soumet le formulaire et réinitialise les champs', () => {
+  it('soumet le formulaire et affiche le message de succès', () => {
     cy.intercept('POST', 'http://localhost:8080/api/contact').as('submitContact');
 
     cy.get('input[data-testid="field-testid"]').eq(0).type('Dupont');
