@@ -37,8 +37,7 @@ describe('Test d\'inscription via slider', () => {
     cy.get('[data-testid="button-test-id"]').eq(1).click();
 
     // On attend la réponse du serveur à la soumission
-    cy.wait('@submitForm');
-
+    cy.wait('@submitForm').its('request.body').should('exist');
     // On vérifie que le bouton revient à son état initial "Envoyer"
     cy.get('[data-testid="button-test-id"]').eq(1).should('have.value', 'Envoyer');
 
